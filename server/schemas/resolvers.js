@@ -12,11 +12,13 @@ const resolvers = {
       return User.find();
     },
     me: async (parent, args, context) => {
+      console.log(context.user);
       if (context.user) {
-        const foundUser = await User.findOne({ _id: context.user.id })
+        const userData = await User.findOne({ _id: context.user._id })
           .select('-__v -password')
           .populate('addedMovies')
-        return foundUser;
+
+        return userData;
       }
       throw new AuthenticationError('Not logged in');
     }
@@ -27,10 +29,9 @@ const resolvers = {
       const newUser = await User.create(args);
       const token = signToken(newUser);
 
-      return newUser;
+      return { token, newUser };
     },
     login: async (parent, { username, password }) => {
-      console.log(username);
       const user = await User.findOne({ username });
 
       if (!user) {
