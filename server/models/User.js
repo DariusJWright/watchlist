@@ -17,7 +17,7 @@ const userSchema = new Schema(
       type: String,
       required: true
     },
-    // object containing the info on the added movies
+    // subdocument containing the info on the added movies
     addedMovies: [movieSchema]
   },
   {
