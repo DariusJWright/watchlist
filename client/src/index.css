@@ -13,6 +13,7 @@
 
 body {
   background-color: var(--main-color);
+  height: 100%;
 }
 
 header {
@@ -22,6 +23,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  position: sticky;
+  width: 100%;
+  z-index: 999;
+  top: 0;
 }
 
 nav {
@@ -43,8 +48,6 @@ nav a {
   color: var(--main-font-color);
   text-decoration: none;
 }
-
-
 
 @media screen and (min-width: 525px) {
   header {
