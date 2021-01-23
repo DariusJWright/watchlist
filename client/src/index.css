@@ -6,9 +6,9 @@
 
 :root {
   --main-color: #a5a2a2;
-  --secondary-color: #0d0c0c;
+  --secondary-color: #e5e5e5;
   --main-font-color: #dd2020;
-  --secondary-font-color: #e5e5e5;
+  --secondary-font-color: #0d0c0c;
 }
 
 body {
@@ -16,8 +16,12 @@ body {
   height: 100%;
 }
 
+/* ============= */
+/* header styles */
+/* ============= */
+
 header {
-  background-color: var(--secondary-font-color);
+  background-color: var(--secondary-color);
   color: var(--main-font-color);
   display: flex;
   justify-content: space-between;
@@ -49,6 +53,31 @@ nav a {
   text-decoration: none;
 }
 
+/* ============= */
+/* footer styles */
+/* ============= */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--secondary-color);
+}
+
+footer h2 {
+  padding: 5px;
+  font-size: 1em;
+}
+
+.footer-spacer {
+  background-color: black;
+  height: 31px;
+}
+
 @media screen and (min-width: 525px) {
   header {
     display: grid;
@@ -74,8 +103,12 @@ nav a {
 }
 
 @media screen and (min-width: 1000px) {
+  /* ============= */
+  /* header styles */
+  /* ============= */
+
   header {
-    height: 100px;
+    height: 80px;
   }
 
   header h1 {
@@ -109,5 +142,17 @@ nav a {
   
   nav a:hover::before {
     transform: scale(1, 1);
+  }
+
+  /* ============= */
+  /* footer styles */
+  /* ============= */
+  
+  footer h2 {
+    font-size: 25px;
+  }
+
+  .footer-spacer {
+    height: 43px;
   }
 }
