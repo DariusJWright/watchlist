@@ -7,4 +7,4 @@ export const getPopularMovieData = async () => {
   } catch (error) {
     console.error(error);
   }
-}
+};
