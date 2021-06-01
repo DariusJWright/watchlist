@@ -2,6 +2,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Signup from './pages/Signup';
 import { ApolloProvider } from '@apollo/client';
 import ApolloClient from 'apollo-boost';
 
@@ -24,7 +25,8 @@ function App() {
     <ApolloProvider client={client}>
       <Header />
       {/* <Home /> */}
-      <Login />
+      {/* <Login /> */}
+      <Signup />
       <div className='footer-spacer'></div>
       <Footer />
     </ApolloProvider>
