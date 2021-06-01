@@ -39,10 +39,10 @@ const Signup = () => {
   };
 
   return (
-    <main>
+    <div className='form-container'>
       <form onSubmit={handleFormSubmit}>
         <input
-          placeholder='Username'
+          placeholder='Username...'
           name='username'
           id='username'
           type='text'
@@ -50,19 +50,19 @@ const Signup = () => {
           onChange={handleChange}
         />
         <input
-          placeholder='Password'
+          placeholder='Password...'
           name='password'
           id='password'
           type='password'
           value={formState.password}
           onChange={handleChange}
         />
-        <button type='submit'>
+        <button className='login-btn' type='submit'>
           Submit
         </button>
         {error && <div>Task Failed Miserably</div>}
       </form>
-    </main>
+    </div>
   )
 }
 

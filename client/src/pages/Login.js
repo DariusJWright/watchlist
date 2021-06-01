@@ -39,7 +39,7 @@ const Login = () => {
   }
 
   return (
-    <main>
+    <div className='form-container'>
       <form onSubmit={handleFormSubmit}>
         <input
           placeholder='Username'
@@ -57,12 +57,12 @@ const Login = () => {
           value={formState.password}
           onChange={handleChange}
         />
-        <button type='submit'>
+        <button className='login-btn' type='submit'>
           Submit
         </button>
         {error && <div>Login Failed Miserably</div>}
       </form>
-    </main>
+    </div>
   )
 }
 
