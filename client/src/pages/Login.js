@@ -42,7 +42,7 @@ const Login = () => {
     <div className='form-container'>
       <form onSubmit={handleFormSubmit}>
         <input
-          placeholder='Username'
+          placeholder='Username...'
           name='username'
           id='username'
           type='text'
@@ -50,7 +50,7 @@ const Login = () => {
           onChange={handleChange}
         />
         <input
-          placeholder='Password'
+          placeholder='Password...'
           name='password'
           id='password'
           type='password'
@@ -58,7 +58,7 @@ const Login = () => {
           onChange={handleChange}
         />
         <button className='btn' type='submit'>
-          Submit
+          Login
         </button>
         {error && <div>Login Failed Miserably</div>}
       </form>

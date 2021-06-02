@@ -21,7 +21,12 @@ html {
 
 body {
   background-image: linear-gradient(130deg, var(--secondary-font-color), var(--main-color), var(--main-font-color), var(--main-color), var(--secondary-font-color));
+  background-attachment: fixed;
   height: 100%;
+}
+
+#root {
+  padding-bottom: 35px;
 }
 
 /* ============= */
@@ -39,6 +44,11 @@ header {
   width: 100%;
   z-index: 999;
   top: 0;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--main-font-color);
 }
 
 nav {
@@ -61,6 +71,16 @@ nav a {
   text-decoration: none;
 }
 
+/* ========== */
+/* 404 styles */
+/* ========== */
+.not-found {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  color: var(--secondary-color);
+}
+
 /* =========== */
 /* form styles */
 /* =========== */
@@ -75,6 +95,15 @@ form {
   display: flex;
   flex-direction: column;
   width: 75%;
+}
+
+.search-form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.search-form {
+  margin-top: 10px;
 }
 
 input, .btn {

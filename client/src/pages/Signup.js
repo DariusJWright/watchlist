@@ -58,7 +58,7 @@ const Signup = () => {
           onChange={handleChange}
         />
         <button className='btn' type='submit'>
-          Submit
+          Signup
         </button>
         {error && <div>Task Failed Miserably</div>}
       </form>

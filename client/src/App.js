@@ -1,10 +1,12 @@
+import { ApolloProvider } from '@apollo/client';
+import ApolloClient from 'apollo-boost';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import { ApolloProvider } from '@apollo/client';
-import ApolloClient from 'apollo-boost';
+import NotFound from './pages/NotFound';
 
 const client = new ApolloClient({
   request: operation => {
@@ -23,12 +25,16 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Header />
-      <Home />
-      <Login />
-      <Signup />
-      <div className='footer-spacer'></div>
-      <Footer />
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/signup' component={Signup} />
+          <Route component={NotFound} />
+        </Switch>
+        <Footer />
+      </Router>
     </ApolloProvider>
   );
 }

@@ -8,12 +8,12 @@ const Search = () => {
   }
 
   return (
-    <div className="form-container">
-      <form className='search' onSubmit={handleFormSubmit}>
+    <div className="search-form-container">
+      <form className='search-form' onSubmit={handleFormSubmit}>
         <input 
           type='text'
           className='search-form'
-          placeholder='Find a movie'
+          placeholder='Find a movie...'
           value={searchText}
         />
         <button className='btn' type='submit'>Search</button>  
