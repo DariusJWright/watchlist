@@ -24,8 +24,8 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Header />
-      {/* <Home /> */}
-      {/* <Login /> */}
+      <Home />
+      <Login />
       <Signup />
       <div className='footer-spacer'></div>
       <Footer />

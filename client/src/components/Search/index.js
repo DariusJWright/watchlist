@@ -8,7 +8,7 @@ const Search = () => {
   }
 
   return (
-    <div>
+    <div className="form-container">
       <form className='search' onSubmit={handleFormSubmit}>
         <input 
           type='text'
@@ -16,7 +16,7 @@ const Search = () => {
           placeholder='Find a movie'
           value={searchText}
         />
-        <button className='button' type='submit'>Search</button>  
+        <button className='btn' type='submit'>Search</button>  
       </form>
     </div>
   );

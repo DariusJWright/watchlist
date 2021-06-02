@@ -77,7 +77,7 @@ form {
   width: 75%;
 }
 
-input, .login-btn {
+input, .btn {
   padding: 8px;
   margin-bottom: 8px;
   border-radius: 10px;
@@ -97,18 +97,17 @@ input:focus {
   outline: none;
 }
 
-.login-btn {
+.btn {
   font-weight: 900;
   font-size: 20px;
-  transition: .5s;
+  transition: .3s;
   cursor: pointer;
 }
 
-.login-btn:hover {
+.btn:hover {
   background-color: var(--main-font-color);
   color: var(--secondary-color);
 }
-
 
 /* ==================== */
 /* popular movie styles */
@@ -143,6 +142,7 @@ footer {
 footer h2 {
   padding: 5px;
   font-size: 1em;
+  color:var(--main-font-color);
 }
 
 .footer-spacer {

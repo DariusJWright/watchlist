@@ -57,7 +57,7 @@ const Login = () => {
           value={formState.password}
           onChange={handleChange}
         />
-        <button className='login-btn' type='submit'>
+        <button className='btn' type='submit'>
           Submit
         </button>
         {error && <div>Login Failed Miserably</div>}
