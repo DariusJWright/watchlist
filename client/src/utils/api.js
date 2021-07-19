@@ -8,3 +8,12 @@ export const getPopularMovieData = async () => {
     console.error(error);
   }
 };
+
+export const searchMoviesByName = async (title) => {
+  try {
+    const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=4da80362321198baf93fcf91ea0ff3ca&language=en-US&query=${title}&include_adult=false`);
+    return response.data.results;
+  } catch (error) {
+    console.error(error);
+  }
+}
