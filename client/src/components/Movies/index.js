@@ -1,5 +1,3 @@
-import { useState, useEffect } from 'react';
-import { getPopularMovieData } from '../../utils/api';
 import Card from '../Card';
 
 const Movies = ({ popular }) => {
