@@ -12,17 +12,9 @@
     "seed": "cd server && npm run seed",
     "heroku-postbuild": "cd client && npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DariusJWright/deep-thoughts.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DariusJWright/deep-thoughts/issues"
-  },
-  "homepage": "https://github.com/DariusJWright/deep-thoughts#readme",
   "dependencies": {
     "if-env": "^1.0.4"
   },

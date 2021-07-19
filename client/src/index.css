@@ -138,21 +138,70 @@ input:focus {
   color: var(--secondary-color);
 }
 
-/* ==================== */
-/* popular movie styles */
-/* ==================== */
-.popular-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
+/* ===================== */
+/* main container styles */
+/* ===================== */
+.container {
   padding: 15px 10px;
+  text-align: center;
 }
 
-.popular img {
-  width: 100%;
-  height: 100%;
+/* =========== */
+/* card styles */
+/* =========== */
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  padding: 5px;
+  border: 3px solid var(--secondary-font-color);
+  border-radius: 10px;
+  font-size: 1em;
 }
 
+.card-img {
+  height: 275px;
+  width: auto;
+  border-radius: 5px;
+  margin-right: 4px;
+  margin: 3px auto;
+}
+
+.movie-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title-overview {
+  color: var(--secondary-font-color);
+}
+
+.title-overview h3 {
+  font-size: 1.5em;
+  margin-bottom: 7px;
+}
+
+.movie-btn {
+  align-self: flex-end;
+  margin: 7px auto;
+  height: auto;
+}
+
+.movie-btn button {
+  background-color: var(--white);
+  color: var(--main-font-color);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.movie-btn button:hover {
+  color: var(--white);
+  background-color: var(--main-font-color);
+}
 /* ============= */
 /* footer styles */
 /* ============= */
@@ -204,6 +253,16 @@ footer h2 {
   form {
     width: 55%;
   }
+
+  .container {
+    padding: 15px 35px;
+  }
+
+  
+
+  .card-img {
+    height: 310px;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -254,10 +313,21 @@ footer h2 {
   form {
     width: 30%;
   }
-  .popular-container {
-    padding: 15px 50px;
+  .container {
+    padding: 15px 100px;
   }
 
+  /* =========== */
+  /* card styles */
+  /* =========== */
+  .card {
+    flex-wrap: nowrap;
+    text-align: left;
+  }
+
+  .card-img {
+    margin: 0 10px;
+  }
   /* ============= */
   /* footer styles */
   /* ============= */
