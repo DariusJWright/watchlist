@@ -5,18 +5,18 @@ import Movies from '../components/Movies';
 
 const Home = () => {
   const [searchText, setSearchText] = useState('');
-  const [searchResults, setSearchResults] = useState({});
+  const [searchResults, setSearchResults] = useState([]);
   
   const handleChange = event => {
     setSearchText(event.target.value);
   }
 
-  const handleFormSubmit = event => {
+  const handleFormSubmit = async event => {
     event.preventDefault();
+    const data = await searchMoviesByName(searchText);
+    setSearchResults(data);
   }
-  
-  console.log(searchText);
-  
+
   return (
     <div>
       <div className="search-form-container">
@@ -26,10 +26,12 @@ const Home = () => {
             className='search-form'
             placeholder='Find a movie...'
             value={searchText}
+            onChange={handleChange}
           />
-          <button className='btn' type='submit' onChange={handleChange}>Search</button>
+          <button className='btn' type='submit' onSubmit={handleFormSubmit}>Search</button>
         </form>
       </div>
+      <Movies movies={searchResults} />
     </div>
   )
 }

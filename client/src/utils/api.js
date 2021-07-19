@@ -16,4 +16,4 @@ export const searchMoviesByName = async (title) => {
   } catch (error) {
     console.error(error);
   }
-}
+};

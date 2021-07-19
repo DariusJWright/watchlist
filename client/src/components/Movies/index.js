@@ -1,13 +1,14 @@
 import Card from '../Card';
 
-const Movies = ({ popular }) => {
+const Movies = ({ movies }) => {
   return (
     <div className='container'>
-      {popular.map(movie => (
+      {movies.map(movie => (
         <Card
             overview={movie.overview}
             posterPath={movie.poster_path}
             title={movie.title}
+            key={movie.id}
         />
       ))}
     </div>

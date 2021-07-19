@@ -145,6 +145,7 @@ input:focus {
 /* ===================== */
 .container {
   padding: 15px 10px;
+  text-align: center;
 }
 
 /* =========== */

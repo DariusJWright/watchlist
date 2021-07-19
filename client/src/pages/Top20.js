@@ -11,7 +11,7 @@ const Top20 = () => {
   }, []);
 
   return (
-    <Movies popular={popularMovieData} />
+    <Movies movies={popularMovieData} />
   )
 }
 
