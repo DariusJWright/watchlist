@@ -10,6 +10,9 @@ const Header = () => {
       <nav>
         <ul>
           <li>
+            <Link to='/top20'>Top 20</Link>
+          </li>
+          <li>
             <Link to='/login'>Login</Link>
           </li>
           <li>

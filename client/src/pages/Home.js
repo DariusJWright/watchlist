@@ -1,16 +1,9 @@
 import { useState, useEffect } from 'react';
-import { getPopularMovieData } from '../utils/api';
 import Movies from '../components/Movies';
 
 
 const Home = () => {
-  const [popularMovieData, setPopularMovieData] = useState([]);
   const [searchText, setSearchText] = useState('');
-  
-  useEffect(async () => {
-    const data = await getPopularMovieData();
-    setPopularMovieData(data);
-  }, []);
   
   const handleFormSubmit = event => {
     event.preventDefault();
@@ -28,7 +21,6 @@ const Home = () => {
           <button className='btn' type='submit'>Search</button>
         </form>
       </div>
-      <Movies popular={popularMovieData} />
     </div>
   )
 }

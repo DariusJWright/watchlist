@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Top20 from './pages/Top20';
 import NotFound from './pages/NotFound';
 
 const client = new ApolloClient({
@@ -31,6 +32,7 @@ function App() {
           <Route exact path='/' component={Home} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/signup' component={Signup} />
+          <Route exact path='/top20' component={Top20} />
           <Route component={NotFound} />
         </Switch>
         <Footer />
