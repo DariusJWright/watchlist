@@ -1,20 +1,34 @@
 import { useState, useEffect } from 'react';
 import { getPopularMovieData } from '../utils/api';
 import Movies from '../components/Movies';
-import Search from '../components/Search';
+
 
 const Home = () => {
   const [popularMovieData, setPopularMovieData] = useState([]);
-  console.log(popularMovieData);
+  const [searchText, setSearchText] = useState('');
+  
   useEffect(async () => {
     const data = await getPopularMovieData();
     setPopularMovieData(data);
   }, []);
-
+  
+  const handleFormSubmit = event => {
+    event.preventDefault();
+  }
   return (
     <div>
-      <Search />
-      <Movies popular={popularMovieData}/>
+      <div className="search-form-container">
+        <form className='search-form' onSubmit={handleFormSubmit}>
+          <input
+            type='text'
+            className='search-form'
+            placeholder='Find a movie...'
+            value={searchText}
+          />
+          <button className='btn' type='submit'>Search</button>
+        </form>
+      </div>
+      <Movies popular={popularMovieData} />
     </div>
   )
 }
